@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@model List<ApplicationUser>
+
+@{
+    ViewData["Title"] = "AdminAction";
+}
+@inject UserManager<ApplicationUser> UserManager
+@inject RoleManager<IdentityRole<Guid>> RoleManager
+
+<h2>AdminTable</h2>
+<div class="row">
+    <div class="col-md-12">
+
+        <section>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" onclick="sortTable()">Sort Name</button>
+                <button type="button" class="btn btn-secondary" onclick="DecsSortTableByDate()">Sort Date Desc</button>
+                <button type="button" class="btn btn-secondary" onclick="AcsSortTableByDate()">Sort Date Asc</button>
+            </div>
+            <form method="post">
+                <table class="table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th col-md-2 scope="col">Id</th>
+                            <th col-md-2 scope="col">UserName</th>
+                            <th col-md-2 scope="col">Email</th>
+                            @foreach (var role in RoleManager.Roles)
+                            {
+                                <th col-md-2 scope="col">@role.Name</th>
+                            }
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Count(); i++)
+                        {
+                        <tr>
+                            <td col-md-2>
+                                <label>@Model[i].Id</label>
+                                <input asp-for="@Model[i].Id" type="hidden" />
+                            </td>
+                            <td col-md-2>
+                                <label> @Model[i].UserName</label>
+                                <input asp-for="@Model[i].UserName" type="hidden" />
+                            </td>
+                            <td col-md-2>
+                                <label> @Model[i].Email</label>
+                                <input asp-for="@Model[i].Email" type="hidden" />
+                            </td>
+                            @foreach (var role in RoleManager.Roles)
+                            {
+                                <td col-md-2>
+                                    <input asp-for="@Model[i].RoleName" value="@role.Name" type="radio"/>
+                                </td>
+                            }
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                <input type="submit" value="Submit" class="btn btn-secondary" />
+            </form>
+        </section>
+    </div>
+</div>
+<script src="@Url.Content("~/js/site.js")" type="text/javascript"></script>

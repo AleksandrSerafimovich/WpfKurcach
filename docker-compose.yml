@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  itnews:
+    image: ${DOCKER_REGISTRY}itnews
+    build:
+      context: .
+      dockerfile: ITnews\Dockerfile

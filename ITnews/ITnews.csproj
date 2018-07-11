@@ -1,0 +1,195 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-ITnews-3AAE8EF8-9BFC-4434-8A89-7866D91860D6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Account\**" />
+    <Compile Remove="Views\Home\**" />
+    <Compile Remove="Views\Manage\**" />
+    <Content Remove="Views\Account\**" />
+    <Content Remove="Views\Home\**" />
+    <Content Remove="Views\Manage\**" />
+    <EmbeddedResource Remove="Views\Account\**" />
+    <EmbeddedResource Remove="Views\Home\**" />
+    <EmbeddedResource Remove="Views\Manage\**" />
+    <None Remove="Views\Account\**" />
+    <None Remove="Views\Home\**" />
+    <None Remove="Views\Manage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20180710152628_Rating.cs" />
+    <Compile Remove="Data\Migrations\20180710152628_Rating.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710160401_Rating.cs" />
+    <Compile Remove="Data\Migrations\20180710160401_Rating.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710161709_polniipizdc.cs" />
+    <Compile Remove="Data\Migrations\20180710161709_polniipizdc.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710161747_polniipizdc.cs" />
+    <Compile Remove="Data\Migrations\20180710161747_polniipizdc.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710161957_polniipizdc.cs" />
+    <Compile Remove="Data\Migrations\20180710161957_polniipizdc.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710162259_polniipizdc.cs" />
+    <Compile Remove="Data\Migrations\20180710162259_polniipizdc.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710180254_CommentAndNews.cs" />
+    <Compile Remove="Data\Migrations\20180710180254_CommentAndNews.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710182158_CommentAndNews.cs" />
+    <Compile Remove="Data\Migrations\20180710182158_CommentAndNews.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180710182433_CommentAndNews.cs" />
+    <Compile Remove="Data\Migrations\20180710182433_CommentAndNews.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\fa-brands.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\fa-regular.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\fa-solid.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\fontawesome.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_animated.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_bordered-pulled.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_core.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_fixed-width.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_icons.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_larger.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_list.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_mixins.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_rotated-flipped.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_screen-reader.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_stacked.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\less\_variables.less" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\fa-brands.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\fa-regular.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\fa-solid.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\fontawesome.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_animated.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_core.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_fixed-width.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_icons.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_larger.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_list.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_mixins.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_screen-reader.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_stacked.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\scss\_variables.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\lib\jqGrid\css\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-bootstrap.less" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-bootstrap.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-bootstrap.styl" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-foundation.less" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-foundation.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic-foundation.styl" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic.less" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic.scss" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\css\open-iconic.styl" />
+    <None Include="wwwroot\lib\jqGrid\css\iconic\font\fonts\open-iconic.svg" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-apollo.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-basic.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-clj.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-css.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-dart.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-erlang.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-go.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-hs.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-lisp.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-llvm.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-lua.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-matlab.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-ml.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-mumps.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-n.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-pascal.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-proto.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-r.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-rd.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-scala.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-sql.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-tcl.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-tex.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-vb.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-vhdl.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-wiki.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-xq.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\lang-yaml.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\prettify.js" />
+    <None Include="wwwroot\lib\jqGrid\prettify\run_prettify.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ar.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-bg.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ca.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-cn.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-cs.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-de.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-dk.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-el.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-en.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-es.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-fa.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-fi.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-fr.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-gl.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-he.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-hr.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-hu.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-id.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-is.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-it.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ja.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-kr.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-lt.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-me.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-nl.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-no.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-pl.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-pt-br.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-pt.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ro.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ru.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-sk.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-sq.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-sr-latin.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-sr.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-sv.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-th.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-tr.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-tw.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-ua.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-uk.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-vi.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\jquery.jqGrid.min.js" />
+    <None Include="wwwroot\lib\jqGrid\trirand\src\jquery.jqGrid.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="Digillect.AspNetCore.Authentication.VKontakte" Version="2.0.1" />
+    <PackageReference Include="jQuery.UI.Combined" Version="1.12.1" />
+    <PackageReference Include="Localization.AspNetCore.TagHelpers" Version="0.4.0" />
+    <PackageReference Include="MailKit" Version="2.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Register.be.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Register.ru.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties package_1json__JSONSchema="http://json.schemastore.org/circleciconfig" /></VisualStudio></ProjectExtensions>
+
+</Project>

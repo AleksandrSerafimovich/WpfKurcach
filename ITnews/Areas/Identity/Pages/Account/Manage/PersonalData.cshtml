@@ -1,0 +1,18 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Stories";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+    Layout = "_Layout";
+}
+<h4 localize>Мои новости</h4>
+<div class="row">
+    <div class="col-md-12">
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+      <script src="~/js/GridJs.js"></script>
+    </div>
+</div>
+
+
+

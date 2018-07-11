@@ -1,0 +1,38 @@
+﻿.ui-jqdialog .ui-jqdialog-titlebar {
+    padding: .3em .2em;
+    position: relative;
+    height: 35px;
+}
+
+#Text {
+    height: 500px;
+    width: 350px;
+    word-wrap: break-word;
+}
+
+#editmodjqGrid {
+    height: 650px !important;
+}
+
+#sData{
+    height: 30px;
+}
+
+#dData {
+    height: 30px;
+}
+
+#cData {
+    height: 30px;
+}   
+
+#eData {
+    height: 30px;
+}
+
+#fbox_jqGrid_search {
+    height: 30px;
+}
+#fbox_jqGrid_reset {
+    height: 30px;
+}
