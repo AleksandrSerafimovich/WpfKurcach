@@ -15,9 +15,11 @@ namespace ITnews.Data
 
         public string Text { get; set; }
 
-        public int AuthorId { get; set; }
+        public Guid AuthorId { get; set; }
 
         public int Likes { get; set; }
+
+        public DateTime Date { get; set; }
 
         public virtual ICollection<UserComment> UserComments { get; set; }
 

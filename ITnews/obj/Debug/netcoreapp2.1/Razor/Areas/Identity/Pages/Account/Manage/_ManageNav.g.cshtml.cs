@@ -85,7 +85,7 @@ WriteAttributeValue("", 134, ManageNavPages.IndexNavClass(ViewContext), 134, 42,
             WriteLiteral(">");
             EndContext();
             BeginContext(178, 42, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e727820ac704ab5b5e46cde2cf8f53c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a25025c54ee5459ea03e1adc677f9926", async() => {
                 BeginContext(209, 7, true);
                 WriteLiteral("Profile");
                 EndContext();
@@ -122,7 +122,7 @@ WriteAttributeValue("", 242, ManageNavPages.ChangePasswordNavClass(ViewContext),
             WriteLiteral(">");
             EndContext();
             BeginContext(295, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "756c2ec9b3504045923a3e71758d97d3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42c9fb267efe400f90fda353d7f1d07f", async() => {
                 BeginContext(356, 8, true);
                 WriteLiteral("Password");
                 EndContext();
@@ -160,7 +160,7 @@ WriteAttributeValue("", 390, ManageNavPages.PersonalDataNavClass(ViewContext), 3
             WriteLiteral(">");
             EndContext();
             BeginContext(441, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8176160e63204b0a8691e936570b2498", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50a039181aed4a76aa7c2e5b40d5f615", async() => {
                 BeginContext(479, 13, true);
                 WriteLiteral("Personal data");
                 EndContext();

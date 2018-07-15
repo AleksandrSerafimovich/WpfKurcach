@@ -65,7 +65,7 @@ using ITnews.Areas.Identity.Pages.Account;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(84, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h2", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9c24aaa2b4a044ac82337129a3b905fb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h2", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f6dad2320e340d5ab222183d2ef89b1", async() => {
                 BeginContext(97, 31, true);
                 WriteLiteral("Подтверждение электронной почты");
                 EndContext();
@@ -88,7 +88,7 @@ using ITnews.Areas.Identity.Pages.Account;
             WriteLiteral("\r\n<div>\r\n    ");
             EndContext();
             BeginContext(146, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("p", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6071a974dfbd4fbeb03777d25fa853b5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("p", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27563f8cf90441889dd317d203feb180", async() => {
                 BeginContext(158, 72, true);
                 WriteLiteral("\r\n        Благодарим вас за подтверждение вашей электронной почты.\r\n    ");
                 EndContext();

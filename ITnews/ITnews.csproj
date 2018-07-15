@@ -39,6 +39,8 @@
     <Compile Remove="Data\Migrations\20180710182158_CommentAndNews.Designer.cs" />
     <Compile Remove="Data\Migrations\20180710182433_CommentAndNews.cs" />
     <Compile Remove="Data\Migrations\20180710182433_CommentAndNews.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180712214913_commentup.cs" />
+    <Compile Remove="Data\Migrations\20180712214913_commentup.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -164,6 +166,22 @@
     <None Include="wwwroot\lib\jqGrid\trirand\i18n\grid.locale-vi.js" />
     <None Include="wwwroot\lib\jqGrid\trirand\jquery.jqGrid.min.js" />
     <None Include="wwwroot\lib\jqGrid\trirand\src\jquery.jqGrid.js" />
+    <None Include="wwwroot\lib\minified\formats\bbcode.js" />
+    <None Include="wwwroot\lib\minified\formats\xhtml.js" />
+    <None Include="wwwroot\lib\minified\icons\material.js" />
+    <None Include="wwwroot\lib\minified\icons\monocons.js" />
+    <None Include="wwwroot\lib\minified\jquery.sceditor.bbcode.min.js" />
+    <None Include="wwwroot\lib\minified\jquery.sceditor.min.js" />
+    <None Include="wwwroot\lib\minified\jquery.sceditor.xhtml.min.js" />
+    <None Include="wwwroot\lib\minified\plugins\autosave.js" />
+    <None Include="wwwroot\lib\minified\plugins\autoyoutube.js" />
+    <None Include="wwwroot\lib\minified\plugins\dragdrop.js" />
+    <None Include="wwwroot\lib\minified\plugins\format.js" />
+    <None Include="wwwroot\lib\minified\plugins\plaintext.js" />
+    <None Include="wwwroot\lib\minified\plugins\strictbbcode.js" />
+    <None Include="wwwroot\lib\minified\plugins\undo.js" />
+    <None Include="wwwroot\lib\minified\plugins\v1compat.js" />
+    <None Include="wwwroot\lib\minified\sceditor.min.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -179,6 +197,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="showdownjs" Version="1.8.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -188,6 +207,10 @@
     <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Register.ru.resx">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\markdown\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties package_1json__JSONSchema="http://json.schemastore.org/circleciconfig" /></VisualStudio></ProjectExtensions>

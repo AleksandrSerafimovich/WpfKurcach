@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "d3a356d8510446f5a90e1a547e615b1485d8f93b"
+    "signature": "6160893bb9c100e6d805b786347c1bee81401e58"
   },
   "compilationOptions": {
     "defines": [
@@ -36,7 +36,8 @@
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
-          "jQuery.UI.Combined": "1.12.1"
+          "jQuery.UI.Combined": "1.12.1",
+          "showdownjs": "1.8.6"
         },
         "runtime": {
           "ITnews.dll": {}
@@ -529,6 +530,7 @@
           "Microsoft.NETCore.Targets": "2.1.0"
         }
       },
+      "showdownjs/1.8.6": {},
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -3972,6 +3974,13 @@
       "sha512": "sha512-F4B4Dtg+QMq+B7Qugv1Hqy4Yr9QWZcdPCHj7pDnExTSpezkkB4fEU5pncEwSFao1UJYWRLp6p4o9gClgWpDLtQ==",
       "path": "runtime.native.system.net.security/4.3.0",
       "hashPath": "runtime.native.system.net.security.4.3.0.nupkg.sha512"
+    },
+    "showdownjs/1.8.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CJJr11a6mXhD3eSp2nd5PdC37/GdZWj5wLQ2sC+glLTCB4tMI99u0/bVoWqXtOmAZkw3DW3mawq+ptuvPTV2OA==",
+      "path": "showdownjs/1.8.6",
+      "hashPath": "showdownjs.1.8.6.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

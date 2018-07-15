@@ -13,12 +13,6 @@
     <div class="col-md-12">
 
         <section>
-
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary" onclick="sortTable()">Sort Name</button>
-                <button type="button" class="btn btn-secondary" onclick="DecsSortTableByDate()">Sort Date Desc</button>
-                <button type="button" class="btn btn-secondary" onclick="AcsSortTableByDate()">Sort Date Asc</button>
-            </div>
             <form method="post">
                 <table class="table" id="myTable">
                     <thead>
@@ -42,12 +36,12 @@
                                 <input asp-for="@Model[i].Id" type="hidden" />
                             </td>
                             <td col-md-2>
-                                <label> @Model[i].UserName</label>
+                                <label>@Model[i].UserName</label>
                                 <input asp-for="@Model[i].UserName" type="hidden" />
                             </td>
                             <td col-md-2>
-                                <label> @Model[i].Email</label>
                                 <input asp-for="@Model[i].Email" type="hidden" />
+                                <a asp-controller="Grid" asp-action="GetTable" asp-route-email="@Model[i].Email">@Model[i].Email</a>
                             </td>
                             @foreach (var role in RoleManager.Roles)
                             {

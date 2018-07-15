@@ -73,7 +73,7 @@ using ITnews.Areas.Identity.Pages.Account.Manage;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(55, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h2", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "671e2059c9744bb582a45326d390796a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h2", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc6bc4d3d89647dda35341ddd7d47e02", async() => {
                 BeginContext(68, 19, true);
                 WriteLiteral("Manage your account");
                 EndContext();
@@ -96,7 +96,7 @@ using ITnews.Areas.Identity.Pages.Account.Manage;
             WriteLiteral("\r\n<div>\r\n    ");
             EndContext();
             BeginContext(105, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h4", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f682c7fc1744994a170be9ab13871d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("h4", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8acc39422054671adfbb6ea8fa72d4c", async() => {
                 BeginContext(118, 28, true);
                 WriteLiteral("Change your account settings");
                 EndContext();
@@ -119,7 +119,7 @@ using ITnews.Areas.Identity.Pages.Account.Manage;
             WriteLiteral("\r\n    <hr />\r\n    <div class=\"row\">\r\n        <div class=\"col-md-3\">\r\n            ");
             EndContext();
             BeginContext(232, 29, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "366fb1b3c5f74ed7b053b69e3d7bf2fd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bc32753664ff4f30bc8991f5cfcfed5c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

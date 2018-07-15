@@ -4,17 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ITnews</title>
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="~/lib/jqGrid/trirand/jquery.jqGrid.min.js"></script>
         <script type="text/javascript" src="~/lib/jqGrid/trirand/i18n/grid.locale-ru.js"></script>
+        <script type="text/javascript" src="~/lib/signalr.js"></script>
+        <script src="~/lib/markdown/markdown.js"></script>
         <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="~/lib/jqGrid/css/jquery-ui.css" />
         <link href="~/lib/jqGrid/css/jquery-ui.css" rel="stylesheet" type="text/css" />
         <link href="~/lib/jqGrid/css/trirand/ui.jqgrid.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="~/css/GridJs.css" />
+        <link rel="stylesheet" type="text/css" href="~/css/star-rating-svg.css">
+        <script src="~/lib/jquery.star-rating-svg.js"></script>
+        <link rel="stylesheet" href="~/lib/minified/themes/default.min.css" id="theme-style" />
+        <script src="~/lib/minified/sceditor.min.js"></script>
+        <script src="~/lib/minified/icons/monocons.js"></script>
+        <script src="~/lib/minified/formats/bbcode.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+                integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+                crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="~/js/Lavout.js"></script>
+        <link rel="stylesheet" href="~/css/Layout.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -22,8 +35,10 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <nav class="header navbar navbar-inverse navbar-fixed-top ">
         <div class="container">
             <div class="navbar-header">
@@ -34,17 +49,22 @@
                     <span class="icon-bar"></span>
                 </button>
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" id="title" class="navbar-brand">ITnews</a></li>
+                    <li><a asp-area="" asp-controller="News" asp-action="Index" id="title" class="navbar-brand">ITnews</a></li>
                     <li><partial name="_SelectLanguagePartial" /></li>
                 </ul>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" localize>Свежее</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About" localize>Лучшее</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" localize>Популярное</a></li>
+                    <li><a asp-area="" asp-controller="News" asp-action="Index" localize>Свежее</a></li>
+                    <li><a asp-area="" asp-controller="News" asp-action="Index" localize>Лучшее</a></li>
+                    <li><a asp-area="" asp-controller="News" asp-action="Index" localize>Популярное</a></li>
+                    <li>
+                        <form asp-controller="News" class="search" asp-action="Search" method="get">
+                            <input type="search" placeholder="поиск" name="name" id="tags" class="input" data-autocomplete-source='@Url.Action("AutocompleteSearch", "News")' />
+                            <input type="submit" name="" value="" class="submit" />
+                        </form>
+                    </li>
                 </ul>
-
                 <partial name="_LoginPartial" />
             </div>
         </div>
@@ -56,14 +76,22 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - ITnews</p>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><p>&copy; 2018 - ITnews</p></div>
+                <div class="col-md-3"></div>
+            </div>
         </footer>
     </div>
 
     <environment include="Development">
-
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/addNews.js"></script>
+        <script src="~/js/comments.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@2/minified/themes/default.min.css" />
+        <script src="https://cdn.jsdelivr.net/combine/npm/sceditor@2/minified/sceditor.min.js,npm/sceditor@2/minified/formats/bbcode.js,npm/sceditor@2/minified/icons/monocons.js,npm/sceditor@2/minified/plugins/dragdrop.js,npm/whatwg-fetch@2,npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+        <script src="~/js/draganddrop.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
@@ -76,6 +104,7 @@
                 integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
                 crossorigin="anonymous">
         </script>
+
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"

@@ -19,9 +19,13 @@ namespace ITnews.Data
 
         public string Text { get; set; }
 
-        public double Rating { get; set; }
+        public double? Rating { get; set; }
+
+        public DateTime Date { get; set; }
 
         public virtual ICollection<UserNew> UserNew { get; set; }
+
+        public virtual ICollection<NewTag> NewTag { get; set; }
 
         public virtual ICollection<Сomment> Comments { get; set; }
 
@@ -29,6 +33,7 @@ namespace ITnews.Data
         {
             UserNew = new List<UserNew>();
             Comments = new List<Сomment>();
+            NewTag = new List<NewTag>();
         }
 
     }

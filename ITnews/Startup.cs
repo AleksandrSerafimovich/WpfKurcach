@@ -22,6 +22,7 @@ using ITnews.Models;
 using AutoMapper;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using ITnews.Hubs;
 
 namespace ITnews
 {
@@ -52,6 +53,7 @@ namespace ITnews
             }).AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddSignalR();
             services.AddAutoMapper();
 
             services.AddAuthentication().AddTwitter(twitterOptions =>
@@ -109,9 +111,14 @@ namespace ITnews
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/News/Error");
                 app.UseHsts();
             }
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<CommentHub>("/comment");
+            });
 
             var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(locOptions.Value);
@@ -124,7 +131,7 @@ namespace ITnews
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=News}/{action=Index}/{id?}");
             });
         }
     }

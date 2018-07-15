@@ -26,7 +26,9 @@ namespace ITnews.Data.Migrations
 
                     b.Property<Guid>("AuthorId");
 
-                    b.Property<double>("Rating");
+                    b.Property<DateTime>("Date");
+
+                    b.Property<double?>("Rating");
 
                     b.Property<string>("Text");
 
@@ -35,6 +37,31 @@ namespace ITnews.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("News");
+                });
+
+            modelBuilder.Entity("ITnews.Data.NewTag", b =>
+                {
+                    b.Property<Guid>("NewId");
+
+                    b.Property<Guid>("TagId");
+
+                    b.HasKey("NewId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("NewTags");
+                });
+
+            modelBuilder.Entity("ITnews.Data.Tag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("ITnews.Data.UserComment", b =>
@@ -47,7 +74,7 @@ namespace ITnews.Data.Migrations
 
                     b.HasIndex("ApplicationUserId");
 
-                    b.ToTable("UserComment");
+                    b.ToTable("UserComments");
                 });
 
             modelBuilder.Entity("ITnews.Data.UserNew", b =>
@@ -56,11 +83,13 @@ namespace ITnews.Data.Migrations
 
                     b.Property<Guid>("ApplicationUserId");
 
+                    b.Property<double?>("Rating");
+
                     b.HasKey("NewId", "ApplicationUserId");
 
                     b.HasIndex("ApplicationUserId");
 
-                    b.ToTable("UserNew");
+                    b.ToTable("UserNews");
                 });
 
             modelBuilder.Entity("ITnews.Data.Сomment", b =>
@@ -68,7 +97,9 @@ namespace ITnews.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AuthorId");
+                    b.Property<Guid>("AuthorId");
+
+                    b.Property<DateTime>("Date");
 
                     b.Property<int>("Likes");
 
@@ -249,6 +280,19 @@ namespace ITnews.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ITnews.Data.NewTag", b =>
+                {
+                    b.HasOne("ITnews.Data.New", "New")
+                        .WithMany("NewTag")
+                        .HasForeignKey("NewId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ITnews.Data.Tag", "Tag")
+                        .WithMany("NewTag")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ITnews.Data.UserComment", b =>

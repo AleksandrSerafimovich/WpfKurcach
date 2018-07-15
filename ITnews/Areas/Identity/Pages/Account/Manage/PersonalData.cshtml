@@ -6,6 +6,14 @@
     Layout = "_Layout";
 }
 <h4 localize>Мои новости</h4>
+@if (User.IsInRole("reader"))
+{
+<div class="row">
+    <div class="col-md-12" localize>У вас нет доступа</div>
+</div>
+}
+else
+{
 <div class="row">
     <div class="col-md-12">
         <table id="jqGrid"></table>
@@ -13,6 +21,8 @@
       <script src="~/js/GridJs.js"></script>
     </div>
 </div>
+}
+
 
 
 

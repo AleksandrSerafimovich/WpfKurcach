@@ -1,0 +1,40 @@
+﻿@using ITnews.Data
+@using Microsoft.AspNetCore.Identity
+@using ITnews.Models.NewViewModel
+@using Microsoft.EntityFrameworkCore
+
+@inject ApplicationDbContext context
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@model New
+
+@{
+    ApplicationUser currentUser = (await UserManager.GetUserAsync(User)) ?? new ApplicationUser();
+}
+@if(SignInManager.IsSignedIn(User)){
+@foreach (var comment in Model.Comments.OrderBy(o => o.Date))
+{
+    <div>
+        <div class="authorComment"><a href="#">@await UserManager.FindByIdAsync((comment.AuthorId).ToString())</a></div>
+        <div class="textComment">@comment.Text</div>
+        <div class="commentFooter">
+            <span class="likesComment">@comment.Likes</span>
+            @if (context.UserComments.FirstOrDefault(c => c.ApplicationUserId == currentUser.Id && c.СommentId == comment.Id) == null)
+            {
+                <span class="heartComment" data-likes="@comment.Likes" data-id="@comment.Id" data-idNews="@Model.Id" data-user="@currentUser.Id">&#10084;</span>
+            }
+            else
+            {
+                <span class="disabled" style="color: red">&#10084;</span>
+            }
+            <span class="dateComment">@comment.Date</span>
+        </div>
+    </div>
+}
+<div class="inputComment">
+    <div>
+        <textarea class="textareaComment @Model.Id" placeholder="Написать коментарий..."></textarea>
+        <button class="btn btn-default sendComments" data-author="@currentUser.Id" data-id="@Model.Id">Отправить</button>
+    </div>
+</div>
+}

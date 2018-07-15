@@ -120,4 +120,7 @@
   <data name="Мои новости" xml:space="preserve">
     <value>Мае навіны</value>
   </data>
+  <data name="У вас нет доступа" xml:space="preserve">
+    <value>У вас няма доступу</value>
+  </data>
 </root>

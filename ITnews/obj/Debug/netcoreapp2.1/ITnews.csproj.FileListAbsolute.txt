@@ -82,7 +82,6 @@ C:\Users\buian\source\repos\ItNews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resourc
 C:\Users\buian\source\repos\ItNews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.ru.resources
 C:\Users\buian\source\repos\ItNews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.Manage.PersonalData.be.resources
 C:\Users\buian\source\repos\ItNews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.Manage.PersonalData.ru.resources
-C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\Admin\AdminAction.g.cshtml.cs
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.ExternalLogin.be.resources
@@ -95,3 +94,13 @@ C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Id
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.g.cshtml.cs
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
 C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\Grid.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_GridPartial.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\News\Index.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AddNewsPartial.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CommentPartial.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Views\News\Search.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.Lockout.be.resources
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\ITnews.Resources.Areas.Identity.Pages.Account.Lockout.ru.resources
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Lockout.g.cshtml.cs
+C:\Users\buian\source\repos\ITnews\ITnews\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs

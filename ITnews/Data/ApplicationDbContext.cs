@@ -18,6 +18,11 @@ namespace ITnews.Data
         }
         public DbSet<New> News { get; set; }
         public DbSet<Сomment> Comments { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<UserNew> UserNews { get; set; }
+        public DbSet<UserComment> UserComments { get; set; }
+        public DbSet<NewTag> NewTags { get; set; }
+
         public object DefaultAuthenticationTypes { get; private set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -49,6 +54,19 @@ namespace ITnews.Data
                 .HasOne(pt => pt.ApplicationUser)
                 .WithMany(t => t.UserNew)
                 .HasForeignKey(pt => pt.ApplicationUserId);
+
+            modelBuilder.Entity<NewTag>()
+            .HasKey(t => new { t.NewId, t.TagId });
+
+            modelBuilder.Entity<NewTag>()
+                .HasOne(pt => pt.New)
+                .WithMany(p => p.NewTag)
+                .HasForeignKey(pt => pt.NewId);
+
+            modelBuilder.Entity<NewTag>()
+                .HasOne(pt => pt.Tag)
+                .WithMany(t => t.NewTag)
+                .HasForeignKey(pt => pt.TagId);
         }
 
     }

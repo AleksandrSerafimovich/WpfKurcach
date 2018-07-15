@@ -68,34 +68,38 @@ namespace ITnews.Areas.Identity.Pages.Account
                 return RedirectToPage("./Login", new {ReturnUrl = returnUrl });
             }
             var info = await _signInManager.GetExternalLoginInfoAsync();
+
             if (info == null)
             {
                 ErrorMessage = "Error loading external login information.";
                 return RedirectToPage("./Login", new { ReturnUrl = returnUrl });
             }
             var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor : true);
-            if (result.Succeeded)
+            var exUser = await _userManager.FindByLoginAsync(info.LoginProvider, info.ProviderKey);
+            if (!await _userManager.IsInRoleAsync(exUser, "banned"))
             {
-                _logger.LogInformation("{Name} logged in with {LoginProvider} provider.", info.Principal.Identity.Name, info.LoginProvider);
-                return LocalRedirect(returnUrl);
-            }
-            if (result.IsLockedOut)
-            {
-                return RedirectToPage("./Lockout");
+                if (result.Succeeded)
+                {
+                    return LocalRedirect(returnUrl);
+                }
+                else
+                {
+                    // If the user does not have an account, then ask the user to create an account.
+                    ReturnUrl = returnUrl;
+                    LoginProvider = info.LoginProvider;
+                    if (info.Principal.HasClaim(c => c.Type == ClaimTypes.Email))
+                    {
+                        Input = new InputModel
+                        {
+                            Email = info.Principal.FindFirstValue(ClaimTypes.Email)
+                        };
+                    }
+                    return Page();
+                }
             }
             else
             {
-                // If the user does not have an account, then ask the user to create an account.
-                ReturnUrl = returnUrl;
-                LoginProvider = info.LoginProvider;
-                if (info.Principal.HasClaim(c => c.Type == ClaimTypes.Email))
-                {
-                    Input = new InputModel
-                    {
-                        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-                    };
-                }
-                return Page();
+                    return RedirectToPage("./Lockout");
             }
         }
 

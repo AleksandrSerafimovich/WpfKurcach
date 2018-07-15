@@ -3149,6 +3149,9 @@
           }
         }
       },
+      "showdownjs/1.8.6": {
+        "type": "package"
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8353,6 +8356,17 @@
         "version.txt"
       ]
     },
+    "showdownjs/1.8.6": {
+      "sha512": "CJJr11a6mXhD3eSp2nd5PdC37/GdZWj5wLQ2sC+glLTCB4tMI99u0/bVoWqXtOmAZkw3DW3mawq+ptuvPTV2OA==",
+      "type": "package",
+      "path": "showdownjs/1.8.6",
+      "files": [
+        "content/Scripts/showdown.js",
+        "content/Scripts/showdown.min.js",
+        "showdownjs.1.8.6.nupkg.sha512",
+        "showdownjs.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "LdPKGC465UekWq8xAH3Oy70tAOSTrhcd6z42aLfyMWLk66FF/pXXh80/BqP/PGDV8S+/2LWAnIrNfi/FVtY2Xg==",
       "type": "package",
@@ -13122,7 +13136,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration >= 2.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
-      "jQuery.UI.Combined >= 1.12.1"
+      "jQuery.UI.Combined >= 1.12.1",
+      "showdownjs >= 1.8.6"
     ]
   },
   "packageFolders": {
@@ -13219,6 +13234,10 @@
           "jQuery.UI.Combined": {
             "target": "Package",
             "version": "[1.12.1, )"
+          },
+          "showdownjs": {
+            "target": "Package",
+            "version": "[1.8.6, )"
           }
         },
         "imports": [

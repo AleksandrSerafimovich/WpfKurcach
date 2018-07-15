@@ -7,17 +7,17 @@
 2 info using npm@3.3.4
 3 info using node@v5.4.1
 4 verbose run-script [ 'prewebpack-script', 'webpack-script', 'postwebpack-script' ]
-5 info lifecycle asp.net@1.0.0~prewebpack-script: asp.net@1.0.0
-6 silly lifecycle asp.net@1.0.0~prewebpack-script: no script for prewebpack-script, continuing
-7 info lifecycle asp.net@1.0.0~webpack-script: asp.net@1.0.0
-8 verbose lifecycle asp.net@1.0.0~webpack-script: unsafe-perm in lifecycle true
-9 verbose lifecycle asp.net@1.0.0~webpack-script: PATH: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\bin\node-gyp-bin;C:\Users\buian\source\repos\ITnews\ITnews\node_modules\.bin;.\node_modules\.bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\buian\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-10.0.1\bin;C:\Users\buian\AppData\Roaming\npm;C:\Users\buian\.dotnet\tools;C:\Users\buian\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\tools;C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.tools\2.1.1\tools;C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.razor.design\2.1.1\tools;C:\Users\buian\.nuget\packages\jquery\1.12.4\tools;C:\Users\buian\.nuget\packages\jquery.ui.combined\1.12.1\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\mingw32\bin
-10 verbose lifecycle asp.net@1.0.0~webpack-script: CWD: C:\Users\buian\source\repos\ITnews\ITnews
-11 silly lifecycle asp.net@1.0.0~webpack-script: Args: [ '/d /s /c', 'webpack' ]
-12 silly lifecycle asp.net@1.0.0~webpack-script: Returned: code: 2  signal: null
-13 info lifecycle asp.net@1.0.0~webpack-script: Failed to exec webpack-script script
-14 verbose stack Error: asp.net@1.0.0 webpack-script: `webpack`
-14 verbose stack Exit status 2
+5 info lifecycle asp.net@~prewebpack-script: asp.net@
+6 silly lifecycle asp.net@~prewebpack-script: no script for prewebpack-script, continuing
+7 info lifecycle asp.net@~webpack-script: asp.net@
+8 verbose lifecycle asp.net@~webpack-script: unsafe-perm in lifecycle true
+9 verbose lifecycle asp.net@~webpack-script: PATH: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\bin\node-gyp-bin;C:\Users\buian\source\repos\ITnews\ITnews\node_modules\.bin;.\node_modules\.bin;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\buian\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-10.0.1\bin;C:\Users\buian\.dotnet\tools;C:\Users\buian\AppData\Roaming\npm;C:\Users\buian\.nuget\packages\microsoft.codeanalysis.analyzers\1.1.0\tools;C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.tools\2.1.1\tools;C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.razor.design\2.1.1\tools;C:\Users\buian\.nuget\packages\jquery\1.12.4\tools;C:\Users\buian\.nuget\packages\jquery.ui.combined\1.12.1\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\mingw32\bin
+10 verbose lifecycle asp.net@~webpack-script: CWD: C:\Users\buian\source\repos\ITnews\ITnews
+11 silly lifecycle asp.net@~webpack-script: Args: [ '/d /s /c', 'webpack' ]
+12 silly lifecycle asp.net@~webpack-script: Returned: code: 1  signal: null
+13 info lifecycle asp.net@~webpack-script: Failed to exec webpack-script script
+14 verbose stack Error: asp.net@ webpack-script: `webpack`
+14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\npm\lib\utils\lifecycle.js:233:16)
 14 verbose stack     at emitTwo (events.js:87:13)
 14 verbose stack     at EventEmitter.emit (events.js:172:7)
@@ -26,16 +26,16 @@
 14 verbose stack     at ChildProcess.emit (events.js:172:7)
 14 verbose stack     at maybeClose (internal/child_process.js:821:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-15 verbose pkgid asp.net@1.0.0
+15 verbose pkgid asp.net@
 16 verbose cwd C:\Users\buian\source\repos\ITnews\ITnews
 17 error Windows_NT 10.0.17134
 18 error argv "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\Node.exe" "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js" "run" "webpack-script" "--color=always"
 19 error node v5.4.1
 20 error npm  v3.3.4
 21 error code ELIFECYCLE
-22 error asp.net@1.0.0 webpack-script: `webpack`
-22 error Exit status 2
-23 error Failed at the asp.net@1.0.0 webpack-script script 'webpack'.
+22 error asp.net@ webpack-script: `webpack`
+22 error Exit status 1
+23 error Failed at the asp.net@ webpack-script script 'webpack'.
 23 error This is most likely a problem with the asp.net package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:

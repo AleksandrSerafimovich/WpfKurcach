@@ -12,6 +12,8 @@ namespace ITnews.Data
         public Guid NewId { get; set; }
         public New New { get; set; }
 
+        public double? Rating { get; set; }
+
         public Guid ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
     }

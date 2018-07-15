@@ -1,0 +1,57 @@
+﻿@using ITnews.Data
+@using Microsoft.AspNetCore.Identity
+@using ITnews.Models.NewViewModel
+@using Microsoft.EntityFrameworkCore
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<New>
+@inject ApplicationDbContext context
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ApplicationUser currentUser = (await UserManager.GetUserAsync(User)) ?? new ApplicationUser();
+}
+
+@{int c = 0; }
+
+    @if(Model != null){
+
+@foreach (var news in Model.OrderByDescending(o => o.Date))
+{
+    double? rating = context.UserNews.
+        FirstOrDefault(i => i.NewId == news.Id
+        && i.ApplicationUserId == (currentUser.Id))?.Rating ?? 0;
+    <div class="new">
+        <div class="title"><span class="date">@news.Date </span><span>@Html.Raw(@news.Title)<span style="float: right;">Рейтинг: @(news.Rating ?? 0)</span></span></div>
+        <div class="text">
+            @Html.Raw(news.Text)
+            <div class="tags">
+                @foreach (NewTag tags in context.NewTags.Include(nt => nt.Tag).Where(n => n.NewId == news.Id))
+                {
+                    <a asp-action="Search" asp-route-name="@tags.Tag.Name">@tags.Tag.Name</a>
+                }
+            </div>
+        </div>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="rating">
+                <a class="openComments" data-id="@news.Id"><img class="commentImg" src="https://png.icons8.com/metro/50/000000/comments.png"></a>
+                <span class="countComments @news.Id">@news.Comments.Count</span>
+                <img class="ratingIcon" src="~/images/anonim.png" />
+                <a class="userName">@await UserManager.FindByIdAsync((news.AuthorId).ToString())</a>
+                <span class="rat my-rating-@c" data-id="@news.Id"
+                      data-rating="@rating"
+                      data-user="@currentUser.Id"
+                      data-count="@context.News.Count()"></span>
+                @{c = c + 1;}
+            </div>
+        }
+        <div class="comments @news.Id">
+
+        </div>
+    </div>
+}
+}

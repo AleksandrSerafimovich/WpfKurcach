@@ -5,9 +5,9 @@
     const bundleFolder = "wwwroot/bundle/";
 
     module.exports = {
-        entry: "./Scripts/main.js",
+        entry: "./node_modules/markdown/lib/markdown.js",
         output: {
-            filename: 'script.js',
+            filename: 'markdown.js',
             path: path.resolve(__dirname, bundleFolder)
         },
         plugins: [

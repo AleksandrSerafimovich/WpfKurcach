@@ -70,27 +70,30 @@ namespace ITnews.Areas.Identity.Pages.Account
                 var user = await _userManager.FindByEmailAsync(Input.Email);
                 if (user != null)
                 {
-
                     if (!await _userManager.IsEmailConfirmedAsync(user))
                     {
                         ModelState.AddModelError(string.Empty, _localizer["Вы не подтвердили свой email"]);
                         return Page();
                     }
                 }
-                var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: true);
-                if (result.Succeeded)
+                if (!await _userManager.IsInRoleAsync(user, "banned"))
                 {
-                    _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: true);
+                    if (result.Succeeded)
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, _localizer["Неправильный логин или пароль"]);
+                        return Page();
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, _localizer["Неправильный логин или пароль"]);
-                    return Page();
+                    return RedirectToPage("Lockout");
                 }
             }
-
-            // If we got this far, something failed, redisplay form
             return Page();
         }
     }
